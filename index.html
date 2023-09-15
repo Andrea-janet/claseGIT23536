@@ -7,5 +7,44 @@
 </head>
 <body>
     <h1>Clase GIT/gitHub</h1>
+
+    <h2>Primeros pasos para trabajar con GIT y GitHub</h2>
+
+    <div class="container">
+        <h3>Trabajando con GIT (repositorio LOCAL)</h3>
+    <ol>
+        <li>Crear un directorio (una carpeta contenedora del proyecto)</li>
+        <li>Abrir el directorio con Visual Studio Code (VSC)</li>
+        <li>En VSC ir a TERMINAL &gt; Nueva Terminal. Podemos elegir en "+" la opcion de Terminal Bash </li>
+        <li>En la terminal, <strong>Inicializamos el repositorio</strong> con el comando <em>git init</em>, que se usa por unica vez en este proyecto.</li>
+        <li>Ahora agregamos contenido al directorio (archivos, otras carpetas) en el Editor de VSC</li>
+        <li>Podemos ver el estado de nuestro repositorio usando un comando: <em>git status</em>. En este punto nos mostrará que nuestro contenido no tiene seguimiento, eso quiere decir que no está en la etapa de staging. Nos damos cuenta porque los nombres de archivos y carpetas se enlistan en <span id="red">rojo</span>.</li>
+        <li>Para agregar el contenido del directorio a la etapa de staging tenemos que usar el comando <em>git add "nombre_de_tu_archivo.ext"</em> o <em>git add .</em> . El último de estos comandos agrega todos los archivos y carpetas automáticamente. Ahora si volvemos a usar "git status", los archivos y carpetas se enlistarán en <span id="green">verde</span>.</li>
+        <li>Ahora ya podemos enviar todo el directorio del área de staging al <strong>Repositorio LOCAL</strong> usando el comando <em>git commit -m "agrega un mensaje descriptivo aca"</em>. A ésto se lo conoce como hacer commit.</li>
+    </ol>
+    </div>
+
+    <div class="container">
+        <h3>Trabajando con GitHub(repositorio REMOTO)</h3>
+        <p>Teniendo todo el directorio en el repositorio Local, ya podemos trabajar con la página GitHub, que es un repositorio remoto.</p>
+    <ol>
+        <li>Habiendo ingresado a nuestra cuenta, primero creamos un nuevo repositorio remoto (boton verde) al que le vamos a dar un nombre y presionaremos continuar</li>
+        <li>A él enviaremos desde la Terminal Bash de VSC todo el repositorio LOCAL.</li>
+    </ol>
+
+    <p>GitHub nos proporcionará todos los comandos necesarios para trabajar en la terminal de VSC.</p>
+    </div>
+
+    <div class="container">
+        <h3>Trabajando con GIT y GitHub en conjunto</h3>
+        <p>Copiamos uno por uno los comandos proporcionados por git, en el orden que son dados.</p>
+        <ol>
+            <li>Copiamos el comando <em>git branch -M main</em> de GitHub y lo pegamos en la terminal VSC</li>
+            <li>Seguimos con <em>git remote add origin https://github.com/TuUsuario/TuRepositorio.git</em>, el cual nos permite vincular ambos repositorios</li>
+            <li>Finalizamos con <em>git push -u origin main</em>, que envía todo lo que está en GIT (R. local) a GitHub (R. remoto). La página de GH nos va a pedir una autenticación en el navegador, damos a aceptar.</li>
+        </ol>
+
+    </div>
+    
 </body>
 </html>

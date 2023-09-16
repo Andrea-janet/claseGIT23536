@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase GIT/gitHub</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <h1>Clase GIT/gitHub</h1>
+    <header>
+        <h1>Clase GIT/gitHub</h1>
 
-    <h2>Primeros pasos para trabajar con GIT y GitHub</h2>
+        <h2>Primeros pasos para trabajar con GIT y GitHub</h2>
 
-    <div class="intro">
-        <p>Para realizar estos pasos ya tenemos que tener instalado <a href="https://git-scm.com/" title="Enlace al sitio de GIT">GIT</a> en nuestro dispositivo.</p>
-    </div>
+        <div class="intro">
+            <p>Para realizar estos pasos ya tenemos que tener instalado <a href="https://git-scm.com/" title="Enlace al sitio de GIT">GIT</a> en nuestro dispositivo.</p>
+        </div>
+    </header>
 
     <div class="container">
         <h3>Creando un usuario en GIT y GitHub</h3>
-        <p>Es indistínto cuál usuario creemos primero, pero para trabajar con ambos repositorios es necesario tenerlos.</p>
+        <p>Es indistínto cuál usuario creemos primero, pero para trabajar con ambos repositorios es necesario tenerlos.
+        </p>
         <ul>
             <li>
                 <h4>Creando un usuario en GIT</h4>
                 <p>Para Registrarnos en GIT usamos dos comandos, este paso es escencial pero se realiza por única vez, no debemos hacerlo con cada proyecto nuevo.</p>
+
                 <ol>
                     <li>Lo primero que tenemos que hacer es abrir una TERMINAL o CONSOLA. Podemos usar el programa "GIT BASH" que se descarga cuando instalamos GIT o usar la terminal de nuestra PC o la terminal que esta incorporada dentro de Visual Studio Code, entre otras.</li>
                     <li>El primer paso es vincular un correo electrónico. A esto lo hacemos en la terminal con el comando <em>git config --global user.email "tucorreo@electronico.com"</em></li>
@@ -41,27 +48,41 @@
 
     <div class="container">
         <h3>Trabajando con GIT (repositorio LOCAL)</h3>
-    <ol>
-        <li>Crear un directorio (una carpeta contenedora del proyecto)</li>
-        <li>Abrir el directorio con Visual Studio Code (VSC)</li>
-        <li>Nos dirigiremos a la consola de VSC seleccionando desde el menú principal (o menú hamburguesa) "Terminal &gt; Nueva Terminal". Desde ahí podemos elegir o agregar con el botón "+" algun tipo de terminal. Se recomienda <strong>Powershell</strong> pero también podemos usar <strong>Bash</strong>, que es la que entiende exclusivamente los comandos de GIT.</li>
-        <li>Una vez allí, <strong>inicializamos el repositorio</strong> con el comando <em>git init</em>, que se usa por unica vez <u>en este proyecto</u>.</li>
-        <li>Ahora agregamos contenido al directorio (archivos, otras carpetas) en el Editor de VSC</li>
-        <li>Podemos ver el estado de nuestro repositorio usando un comando: <em>git status</em>. En este punto nos mostrará que nuestro contenido no tiene seguimiento, eso quiere decir que no está en la etapa de staging. Nos damos cuenta porque los nombres de archivos y carpetas se enlistan en <span id="red">rojo</span>.</li>
-        <li>Para agregar el contenido del directorio a la etapa de staging tenemos que usar el comando <em>git add "nombre_de_tu_archivo.ext"</em> o <em>git add .</em> . El último de estos comandos agrega todos los archivos y carpetas automáticamente. Ahora si volvemos a usar "git status", los archivos y carpetas se enlistarán en <span id="green">verde</span>.</li>
-        <li>Ahora ya podemos enviar todo el directorio del área de staging al <strong>Repositorio LOCAL</strong> usando el comando <em>git commit -m "agrega un mensaje descriptivo aca"</em>. A ésto se lo conoce como hacer commit.</li>
-    </ol>
+        <ol>
+            <li>Crear un directorio (una carpeta contenedora del proyecto)</li>
+            <li>Abrir el directorio con Visual Studio Code (VSC)</li>
+            <li>Nos dirigiremos a la consola de VSC seleccionando desde el menú principal (o menú hamburguesa) "Terminal
+                &gt; Nueva Terminal". Desde ahí podemos elegir o agregar con el botón "+" algun tipo de terminal. Se
+                recomienda <strong>Powershell</strong> pero también podemos usar <strong>Bash</strong>, que es la que
+                entiende exclusivamente los comandos de GIT.</li>
+            <li>Una vez allí, <strong>inicializamos el repositorio</strong> con el comando <em>git init</em>, que se usa
+                por unica vez <u>en este proyecto</u>.</li>
+            <li>Ahora agregamos contenido al directorio (archivos, otras carpetas) en el Editor de VSC</li>
+            <li>Podemos ver el estado de nuestro repositorio usando un comando: <em>git status</em>. En este punto nos
+                mostrará que nuestro contenido no tiene seguimiento, eso quiere decir que no está en la etapa de
+                staging. Nos damos cuenta porque los nombres de archivos y carpetas se enlistan en <span
+                    id="red">rojo</span>.</li>
+            <li>Para agregar el contenido del directorio a la etapa de staging tenemos que usar el comando <em>git add
+                    "nombre_de_tu_archivo.ext"</em> o <em>git add .</em> . El último de estos comandos agrega todos los
+                archivos y carpetas automáticamente. Ahora si volvemos a usar "git status", los archivos y carpetas se
+                enlistarán en <span id="green">verde</span>.</li>
+            <li>Ahora ya podemos enviar todo el directorio del área de staging al <strong>Repositorio LOCAL</strong>
+                usando el comando <em>git commit -m "agrega un mensaje descriptivo aca"</em>. A ésto se lo conoce como
+                hacer commit.</li>
+        </ol>
     </div>
 
     <div class="container">
         <h3>Trabajando con GitHub (repositorio REMOTO)</h3>
-        <p>Teniendo todo el directorio en el repositorio Local, ya podemos trabajar con la página GitHub, que es un repositorio remoto.</p>
-    <ol>
-        <li>Habiendo ingresado a nuestra cuenta, primero creamos un nuevo repositorio remoto (boton verde) al que le vamos a dar un nombre y presionaremos el boton "crear repositorio" (Create repository).</li>
-        <li>A él enviaremos desde la Terminal Bash de VSC todo el repositorio LOCAL.</li>
-    </ol>
+        <p>Teniendo todo el directorio en el repositorio Local, ya podemos trabajar con la página GitHub, que es un
+            repositorio remoto.</p>
+        <ol>
+            <li>Habiendo ingresado a nuestra cuenta, primero creamos un nuevo repositorio remoto (boton verde) al que le
+                vamos a dar un nombre y presionaremos el boton "crear repositorio" (Create repository).</li>
+            <li>A él enviaremos desde la Terminal Bash de VSC todo el repositorio LOCAL.</li>
+        </ol>
 
-    <p>GitHub nos proporcionará todos los comandos necesarios para trabajar en la terminal de VSC.</p>
+        <p>GitHub nos proporcionará todos los comandos necesarios para trabajar en la terminal de VSC.</p>
     </div>
 
     <div class="container">
@@ -69,11 +90,15 @@
         <p>Copiamos uno por uno los comandos proporcionados por git, en el orden que son dados.</p>
         <ol>
             <li>Copiamos el comando <em>git branch -M main</em> de GitHub y lo pegamos en la terminal VSC</li>
-            <li>Ahora colocamos un comando que nos permitirá vincular ambos repositorios <em>git remote add origin https://github.com/TuUsuario/TuRepositorio.git</em>. A ésto lo realizaremos por única vez <u>para este proyecto</u>.</li>
-            <li>Finalizamos con <em>git push -u origin main</em>, que envía todo lo que está en GIT (R. local) a GitHub (R. remoto). La página de GH nos va a pedir una autenticación en el navegador, damos a aceptar.</li>
+            <li>Ahora colocamos un comando que nos permitirá vincular ambos repositorios <em>git remote add origin
+                    https://github.com/TuUsuario/TuRepositorio.git</em>. A ésto lo realizaremos por única vez <u>para
+                    este proyecto</u>.</li>
+            <li>Finalizamos con <em>git push -u origin main</em>, que envía todo lo que está en GIT (R. local) a GitHub
+                (R. remoto). La página de GH nos va a pedir una autenticación en el navegador, damos a aceptar.</li>
         </ol>
 
     </div>
-    
+
 </body>
+
 </html>
